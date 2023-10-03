@@ -3,11 +3,12 @@
 #include <unordered_set>
 #include <limits>
 
+#include "ConvexHull.hpp"
+
 #define INF 0x3f3f3f3f
 
-
 int main() {
-    std::cout << "Hello wold!";
+    
     return 0;
 }
 

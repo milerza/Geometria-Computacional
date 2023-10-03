@@ -4,8 +4,9 @@ std::vector<point> convexHull::giftWrapping(){
     std::vector<point> hull;
 
     int n = points.size();
+    
     if(n < 3){
-        return;
+        return hull;
     }
 
     //encontra o ponto mais a esquerda

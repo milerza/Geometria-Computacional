@@ -2,7 +2,7 @@
 #define CONVEX_HULL
 
 #include <vector>
-#include "Point.hpp";
+#include "Point.hpp"
 
 class convexHull {
     private:

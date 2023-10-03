@@ -2,10 +2,11 @@
 
 # Compiler options
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++11 -Wall -c -Iinclude 
 
 # Source files
-SRCS := $(wildcard *.cpp)
+INCLUDE_FOLDER := ./include/
+SRCS := $(wildcard src/*.cpp)
 
 # Object files
 OBJS := $(SRCS:.cpp=.o)
@@ -19,7 +20,7 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 clean:
 	rm -f $(OBJS) $(TARGET)
